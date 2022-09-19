@@ -1,10 +1,14 @@
 import java.net.HttpURLConnection;
+import org.openqa.selenium.UnhandledAlertException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -14,8 +18,12 @@ import org.testng.annotations.Test;
 
 public class Sign_UPTest {
 	
-	WebDriver driver;
-
+WebDriver driver;
+@AfterMethod
+public void closeBro() {
+BrowserFactory.QuitBrowser(driver);
+}
+    
 	
 
     	
@@ -28,12 +36,7 @@ public class Sign_UPTest {
         driver = BrowserFactory.startapplication(driver, "Chrome",          " https://mobileworld.banyanpro.com/");
         Signuppom_page lgnpage = PageFactory.initElements(driver, Signuppom_page.class);
         lgnpage.SignUpApp("re", "pri","priyanka@gmail.com","re13","2/12/2000","9497752084","hi hello");
-        
-        String expectederrormsg = "Do not enter less than 3 character";
-        String actualmsg = driver.getTitle();
-        
-        Assert.assertEquals(actualmsg, expectederrormsg);
-
+        Assert.assertEquals(driver.getCurrentUrl(),"https://mobileworld.banyanpro.com/signup.html");
         
 //        BrowserFactory.QuitBrowser(driver);
         
@@ -46,12 +49,34 @@ public class Sign_UPTest {
         driver = BrowserFactory.startapplication(driver, "Chrome",          " https://mobileworld.banyanpro.com/");
         Signuppom_page lgnpage = PageFactory.initElements(driver, Signuppom_page.class);
         lgnpage.SignUpApp("rep", "priyankavschyrytfghchfsd","priyanka@gmail.com","re13","2/12/2000","9497752084","hi hello");
+     // Get the typed value
+        Assert.assertEquals(driver.getCurrentUrl(),"https://mobileworld.banyanpro.com/signup.html");
+      
+     		
+       
         
+//        BrowserFactory.QuitBrowser(driver);
         
-        String expectederrormsg = "Do not enter more than 20 characters";
-        String actualmsg = driver.getTitle();
+    }
+    @Parameters({"Valid Firstname ","valid last name","invalid email","valid password","valid DOB","valid Gender","valid phone number","Short Bio"})
+    @Test(description = "User is unable to login without putting @ symbol ",priority=3)
+    public void InValidlogin3() throws InterruptedException
+    {
+    	
+        driver = BrowserFactory.startapplication(driver, "Chrome",          " https://mobileworld.banyanpro.com/");
+        Signuppom_page lgnpage = PageFactory.initElements(driver, Signuppom_page.class);
+        lgnpage.SignUpApp("rep", "priyanka","priyanka","re13","2/12/2000","9497752084","hi hello");
         
-//        Assert.assertEquals(actualmsg, expectederrormsg);
+        WebElement emailField = driver.findElement(By.xpath("//input[ @type='Email']"));
+        
+        System.out.println(emailField.getAttribute("validationMessage"));
+       
+       
+    
+    }
+        
+      
+    
 
         
 //        BrowserFactory.QuitBrowser(driver);
@@ -59,4 +84,4 @@ public class Sign_UPTest {
     }
 
 	
-}
+

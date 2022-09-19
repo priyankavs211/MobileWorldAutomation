@@ -1,8 +1,11 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Signuppom_page {
-
+	
+	
  @FindBy(xpath="//button[@type='submit']")
 	  WebElement SignIn;
 
@@ -41,7 +44,7 @@ public class Signuppom_page {
   WebElement register;
   
   
-  @FindBy(css="button[type='Submit']")
+  @FindBy(xpath="//button[@type='Submit']")
   WebElement Sign_In;
   
  
@@ -52,28 +55,38 @@ public class Signuppom_page {
 	  
 	  
 	  signUp.click();
-      Thread.sleep(2000);
+      
       
       FirstName.sendKeys(Fname);
-      Thread.sleep(2000);
+     
       LastName.sendKeys(Lname);
-      Thread.sleep(2000);
+      
       Email.sendKeys(eml);
-      Thread.sleep(2000);
+     
       passwd.sendKeys(pssd);
-      Thread.sleep(2000);
+      
       dateofbirth.sendKeys(dob);
-      Thread.sleep(2000);
+      
       male.click();
-      Thread.sleep(2000);
+     
       Mobile.sendKeys(phonenumber);
       Thread.sleep(2000);
       
       Bio.sendKeys(Shtbio);
       Thread.sleep(2000);
+     
       register.click();
       Thread.sleep(2000);
-//      Sign_In.click();
+      
+      
+    
+      //Sign_In.click();
+      //Thread.sleep(2000);
+      
+      
+      
+      
      
   } 
+ 
 }

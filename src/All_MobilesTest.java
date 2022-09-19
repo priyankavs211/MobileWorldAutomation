@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -69,7 +70,7 @@ public class All_MobilesTest {
       All_mobiles_pom lgnpage = PageFactory.initElements(driver, All_mobiles_pom.class);
       lgnpage.Allmobiles("apple $%");
       String expectederrormsg = "Do not enter special characters";
-      String actualmsg = driver.getTitle();
+      WebElement actualmsg=driver.findElement(null);
       
       Assert.assertEquals(actualmsg, expectederrormsg);
      
