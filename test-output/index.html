@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\priyanka.vs\AppData\Local\Temp\testng-eclipse--1931441652\testng-customsuite.xml</span>
+                    <span>C:\Users\priyanka.vs\AppData\Local\Temp\testng-eclipse--28023644\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,17 +104,12 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="All_MobilesTest" class="method navigator-link" hash-for-method="NoMobilename">NoMobilename</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Sign_UPTest" class="method navigator-link" hash-for-method="InValidLogin">InValidLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="All_MobilesTest" class="method navigator-link" hash-for-method="Space">Space</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="All_MobilesTest" class="method navigator-link" hash-for-method="SpecialCharacter">SpecialCharacter</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Sign_UPTest" class="method navigator-link" hash-for-method="InValidlogin2">InValidlogin2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -128,7 +123,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="All_MobilesTest" class="method navigator-link" hash-for-method="ValidSearchName">ValidSearchName</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="Sign_UPTest" class="method navigator-link" hash-for-method="InValidlogin3">InValidlogin3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="Sign_UPTest" class="method navigator-link" hash-for-method="InValidlogin4">InValidlogin4</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -146,20 +146,32 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">All_MobilesTest</span>
+              <span class="class-name">Sign_UPTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="NoMobilename">
-                  </a> <!-- NoMobilename -->
-                  <span class="method-name">NoMobilename</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at All_MobilesTest.NoMobilename(All_MobilesTest.java:59)
+                  <a name="InValidLogin">
+                  </a> <!-- InValidLogin -->
+                  <span class="method-name">InValidLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Hai,re! Go To SingIn}
+  (Session info: chrome=105.0.5195.127): Hai,re! Go To SingIn
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;QT-INBG-LT1160&apos;, ip: &apos;10.20.15.62&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [df2db2a202a38c024627e4bebe548c5e, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\priyanka.vs\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53093}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53093/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df2db2a202a38c024627e4bebe548c5e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+	at Sign_UPTest.InValidLogin(Sign_UPTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -189,20 +201,32 @@
 
 </div> <!-- stack-trace -->
                   <em>
-(Users is not  able to get details of the searched mobile name )                  </em>
+(User is able to login with with less than 3 characters and more than 20 characters)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Space">
-                  </a> <!-- Space -->
-                  <span class="method-name">Space</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at All_MobilesTest.Space(All_MobilesTest.java:45)
+                  <a name="InValidlogin2">
+                  </a> <!-- InValidlogin2 -->
+                  <span class="method-name">InValidlogin2</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Hai,rep! Go To SingIn}
+  (Session info: chrome=105.0.5195.127): Hai,rep! Go To SingIn
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;QT-INBG-LT1160&apos;, ip: &apos;10.20.15.62&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1ae68d2dcf5d6a13d63644de4bacb46f, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\priyanka.vs\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53133}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53133/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ae68d2dcf5d6a13d63644de4bacb46f
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+	at Sign_UPTest.InValidlogin2(Sign_UPTest.java:53)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -232,48 +256,7 @@
 
 </div> <!-- stack-trace -->
                   <em>
-(Users is not  able to get details of the searched mobile name )                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SpecialCharacter">
-                  </a> <!-- SpecialCharacter -->
-                  <span class="method-name">SpecialCharacter</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: Locator must be set
-	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at All_MobilesTest.SpecialCharacter(All_MobilesTest.java:73)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Users is not  able to get details of the searched mobile name )                  </em>
+(User is able to login with with more than 3 characters and less than 20 characters)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -281,16 +264,25 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">All_MobilesTest</span>
+              <span class="class-name">Sign_UPTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ValidSearchName">
-                  </a> <!-- ValidSearchName -->
-                  <span class="method-name">ValidSearchName</span>
+                  <a name="InValidlogin3">
+                  </a> <!-- InValidlogin3 -->
+                  <span class="method-name">InValidlogin3</span>
                   <em>
-(User is able to get details of the searched mobile name )                  </em>
+(User is unable to login without putting @ symbol )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InValidlogin4">
+                  </a> <!-- InValidlogin4 -->
+                  <span class="method-name">InValidlogin4</span>
+                  <em>
+(User is unable to login without giving DOB )                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -298,7 +290,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\priyanka.vs\AppData\Local\Temp\testng-eclipse--1931441652\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\priyanka.vs\AppData\Local\Temp\testng-eclipse--28023644\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -307,7 +299,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;All_MobilesTest&quot;/&gt;
+      &lt;class name=&quot;Sign_UPTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -349,26 +341,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ValidSearchName')
-data.setCell(0, 2, 'All_MobilesTest')
-data.setCell(0, 3, 7590);
+data.setCell(0, 1, 'InValidLogin')
+data.setCell(0, 2, 'Sign_UPTest')
+data.setCell(0, 3, 10654);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Space')
-data.setCell(1, 2, 'All_MobilesTest')
-data.setCell(1, 3, 6921);
+data.setCell(1, 1, 'InValidlogin2')
+data.setCell(1, 2, 'Sign_UPTest')
+data.setCell(1, 3, 9311);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'NoMobilename')
-data.setCell(2, 2, 'All_MobilesTest')
-data.setCell(2, 3, 6623);
+data.setCell(2, 1, 'InValidlogin3')
+data.setCell(2, 2, 'Sign_UPTest')
+data.setCell(2, 3, 9289);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'SpecialCharacter')
-data.setCell(3, 2, 'All_MobilesTest')
-data.setCell(3, 3, 6538);
+data.setCell(3, 1, 'InValidlogin4')
+data.setCell(3, 2, 'Sign_UPTest')
+data.setCell(3, 3, 9253);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -394,44 +386,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">All_MobilesTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Sign_UPTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">ValidSearchName</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">InValidLogin</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBro</span>
-                <span class="method-start">7593 ms</span>
+                <span class="method-start">10666 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Space</span>
-                <span class="method-start">12135 ms</span>
+                <span class="method-name">InValidlogin2</span>
+                <span class="method-start">10965 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBro</span>
-                <span class="method-start">19057 ms</span>
+                <span class="method-start">20280 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">NoMobilename</span>
-                <span class="method-start">28251 ms</span>
+                <span class="method-name">InValidlogin3</span>
+                <span class="method-start">21687 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBro</span>
-                <span class="method-start">34875 ms</span>
+                <span class="method-start">30978 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">SpecialCharacter</span>
-                <span class="method-start">42300 ms</span>
+                <span class="method-name">InValidlogin4</span>
+                <span class="method-start">35804 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBro</span>
-                <span class="method-start">48840 ms</span>
+                <span class="method-start">45058 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

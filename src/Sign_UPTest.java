@@ -74,6 +74,22 @@ BrowserFactory.QuitBrowser(driver);
        
     
     }
+    @Parameters({"Valid Firstname ","valid last name","valid email","valid password","NO DOB","valid Gender","valid phone number","Short Bio"})
+    @Test(description = "User is unable to login without giving DOB ",priority=4)
+    public void InValidlogin4() throws InterruptedException
+    {
+    	
+        driver = BrowserFactory.startapplication(driver, "Chrome",          " https://mobileworld.banyanpro.com/");
+        Signuppom_page lgnpage = PageFactory.initElements(driver, Signuppom_page.class);
+        lgnpage.SignUpApp("rep", "priyanka","priyanka","re13","","9497752084","hi hello");
+        
+        WebElement dateofbirth= driver.findElement(By.xpath("//input[@type='date']"));
+        Assert.assertEquals("https://mobileworld.banyanpro.com/signup.html", driver.getCurrentUrl());
+       
+       
+       
+    
+    }
         
       
     

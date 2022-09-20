@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-19T17:32:11 IST" name="Default suite" finished-at="2022-09-19T17:33:05 IST" duration-ms="54384">
+  <suite started-at="2022-09-20T14:30:45 IST" name="Default suite" finished-at="2022-09-20T14:31:31 IST" duration-ms="45862">
     <groups>
     </groups>
-    <test started-at="2022-09-19T17:32:11 IST" name="Default test" finished-at="2022-09-19T17:33:05 IST" duration-ms="54384">
-      <class name="All_MobilesTest">
-        <test-method signature="ValidSearchName()[pri:1, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:11 IST" name="ValidSearchName" description="User is able to get details of the searched mobile name " finished-at="2022-09-19T17:32:19 IST" duration-ms="7590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidSearchName -->
-        <test-method is-config="true" signature="closeBro()[pri:0, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:19 IST" name="closeBro" finished-at="2022-09-19T17:32:23 IST" duration-ms="4540" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBro -->
-        <test-method signature="Space()[pri:2, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:23 IST" name="Space" description="Users is not  able to get details of the searched mobile name " finished-at="2022-09-19T17:32:30 IST" duration-ms="6921" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2022-09-20T14:30:45 IST" name="Default test" finished-at="2022-09-20T14:31:31 IST" duration-ms="45862">
+      <class name="Sign_UPTest">
+        <test-method signature="InValidLogin()[pri:2, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:30:45 IST" name="InValidLogin" description="User is able to login with with less than 3 characters and more than 20 characters" finished-at="2022-09-20T14:30:56 IST" duration-ms="10654" status="FAIL">
+          <exception class="org.openqa.selenium.UnhandledAlertException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[unexpected alert open: {Alert text : Hai,re! Go To SingIn}
+  (Session info: chrome=105.0.5195.127): Hai,re! Go To SingIn
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'QT-INBG-LT1160', ip: '10.20.15.62', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [df2db2a202a38c024627e4bebe548c5e, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\priyanka.vs\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53093}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53093/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df2db2a202a38c024627e4bebe548c5e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at All_MobilesTest.Space(All_MobilesTest.java:45)
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Hai,re! Go To SingIn}
+  (Session info: chrome=105.0.5195.127): Hai,re! Go To SingIn
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'QT-INBG-LT1160', ip: '10.20.15.62', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [df2db2a202a38c024627e4bebe548c5e, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\priyanka.vs\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53093}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53093/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: df2db2a202a38c024627e4bebe548c5e
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+at Sign_UPTest.InValidLogin(Sign_UPTest.java:39)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -55,26 +66,45 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Space -->
-        <test-method is-config="true" signature="closeBro()[pri:0, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:30 IST" name="closeBro" finished-at="2022-09-19T17:32:39 IST" duration-ms="9193" status="PASS">
+        </test-method> <!-- InValidLogin -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:30:56 IST" name="closeBro" finished-at="2022-09-20T14:30:56 IST" duration-ms="296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBro -->
-        <test-method signature="NoMobilename()[pri:3, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:39 IST" name="NoMobilename" description="Users is not  able to get details of the searched mobile name " finished-at="2022-09-19T17:32:46 IST" duration-ms="6623" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="InValidlogin2()[pri:2, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:30:56 IST" name="InValidlogin2" description="User is able to login with with more than 3 characters and less than 20 characters" finished-at="2022-09-20T14:31:06 IST" duration-ms="9311" status="FAIL">
+          <exception class="org.openqa.selenium.UnhandledAlertException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[unexpected alert open: {Alert text : Hai,rep! Go To SingIn}
+  (Session info: chrome=105.0.5195.127): Hai,rep! Go To SingIn
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'QT-INBG-LT1160', ip: '10.20.15.62', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1ae68d2dcf5d6a13d63644de4bacb46f, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\priyanka.vs\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53133}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53133/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ae68d2dcf5d6a13d63644de4bacb46f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at All_MobilesTest.NoMobilename(All_MobilesTest.java:59)
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Hai,rep! Go To SingIn}
+  (Session info: chrome=105.0.5195.127): Hai,rep! Go To SingIn
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'QT-INBG-LT1160', ip: '10.20.15.62', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1ae68d2dcf5d6a13d63644de4bacb46f, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\priyanka.vs\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53133}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53133/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ae68d2dcf5d6a13d63644de4bacb46f
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+at Sign_UPTest.InValidlogin2(Sign_UPTest.java:53)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -103,61 +133,31 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NoMobilename -->
-        <test-method is-config="true" signature="closeBro()[pri:0, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:46 IST" name="closeBro" finished-at="2022-09-19T17:32:53 IST" duration-ms="7424" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBro -->
-        <test-method signature="SpecialCharacter()[pri:3, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:32:53 IST" name="SpecialCharacter" description="Users is not  able to get details of the searched mobile name " finished-at="2022-09-19T17:33:00 IST" duration-ms="6538" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Locator must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Locator must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at All_MobilesTest.SpecialCharacter(All_MobilesTest.java:73)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SpecialCharacter -->
-        <test-method is-config="true" signature="closeBro()[pri:0, instance:All_MobilesTest@50b472aa]" started-at="2022-09-19T17:33:00 IST" name="closeBro" finished-at="2022-09-19T17:33:05 IST" duration-ms="5518" status="PASS">
+        </test-method> <!-- InValidlogin2 -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:31:06 IST" name="closeBro" finished-at="2022-09-20T14:31:07 IST" duration-ms="1407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBro -->
-      </class> <!-- All_MobilesTest -->
+        <test-method signature="InValidlogin3()[pri:3, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:31:07 IST" name="InValidlogin3" description="User is unable to login without putting @ symbol " finished-at="2022-09-20T14:31:16 IST" duration-ms="9289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InValidlogin3 -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:31:16 IST" name="closeBro" finished-at="2022-09-20T14:31:21 IST" duration-ms="4825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBro -->
+        <test-method signature="InValidlogin4()[pri:4, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:31:21 IST" name="InValidlogin4" description="User is unable to login without giving DOB " finished-at="2022-09-20T14:31:31 IST" duration-ms="9253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InValidlogin4 -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:Sign_UPTest@50b472aa]" started-at="2022-09-20T14:31:31 IST" name="closeBro" finished-at="2022-09-20T14:31:31 IST" duration-ms="764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBro -->
+      </class> <!-- Sign_UPTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
